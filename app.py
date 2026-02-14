@@ -143,7 +143,7 @@ def main():
         except:
             st.warning("Immagine 'GENERA Logo Colore.png' non trovata. Caricala nella repository.")
     
-    st.markdown('<h1 class="main-title">Psychological Wellbeing Asset Mapping:<br>quali sono le tue risorse di benessere?</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-title">PWB Asset Mapping:<br>quali sono le tue risorse di benessere?</h1>', unsafe_allow_html=True)
 
     # Inizializzazione session state per gestire il flusso
     if 'submitted' not in st.session_state:
@@ -274,14 +274,14 @@ def main():
         col_res1, col_res2 = st.columns(2)
         
         with col_res1:
-            st.markdown("### 🌟 Le tue Risorse principali")
+            st.markdown("### Le tue Risorse principali")
             for dim, val in top_2:
                 st.markdown(f"**{dim}** (Score: {val:.1f})")
                 st.caption(DEFINIZIONI_DIMENSIONI[dim])
                 st.write("---")
 
         with col_res2:
-            st.markdown("### 🪴 Aree da coltivare")
+            st.markdown("### Aree da coltivare")
             for dim, val in bottom_2:
                 st.markdown(f"**{dim}** (Score: {val:.1f})")
                 st.caption(DEFINIZIONI_DIMENSIONI[dim])
